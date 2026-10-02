@@ -842,6 +842,51 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .about-bio strong { color: var(--white); }
 
+/* ── FAQ ── */
+.faq-list {
+  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-item {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 24px;
+}
+
+.faq-item summary {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "\f078";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 13px;
+  color: var(--yellow);
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+.faq-item[open] summary::after { transform: rotate(180deg); }
+
+.faq-item p {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.65;
+  margin-top: 14px;
+}
+
 /* ── CONTACT ── */
 .contact-wrapper {
   max-width: 860px;
