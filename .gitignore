@@ -1,0 +1,12 @@
+# Internal reference docs and automation blueprints — not part of the live site
+SAEEMAX_SITE_BRIEF.md
+MakeCom Blueprints/
+*.blueprint*.json
+
+# Unused raw footage not referenced by the site
+media/*Raw*.mp4
+media/*raw*.mp4
+
+# OS cruft
+.DS_Store
+Thumbs.db

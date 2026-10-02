@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary SEO -->
+  <title>Saeemax — AI Automation Agency | Make.com Systems for Marketing Agencies</title>
+  <meta name="description" content="Saeemax builds AI automation systems in Make.com that save marketing agencies 10+ hours a week. Content repurposing, lead response, and client reporting — built, tested, and handed off to your account.">
+  <meta name="keywords" content="AI automation agency, Make.com automation, marketing agency automation, content repurposing automation, lead response automation, no-code automation, workflow automation, Make.com freelancer">
+  <meta name="author" content="Syed Faaris Razi" />
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://saeemax.com/">
+
+  <!-- Open Graph (social sharing) -->
+  <meta property="og:title" content="Saeemax — AI Automation Systems for Marketing Agencies">
+  <meta property="og:description" content="We build Make.com automation systems that save agencies 10+ hours a week. Content repurposing, lead response, client reporting — delivered in 48 hours.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://saeemax.com/">
+  <!-- media/og-image.jpg does not exist yet — create a 1200x630 navy image with logo + headline and drop it in media/ -->
+  <meta property="og:image" content="https://saeemax.com/media/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Saeemax — AI Automation for Marketing Agencies">
+  <meta name="twitter:description" content="Make.com systems that save your team 10+ hours a week. Built and handed off in 48 hours.">
+  <meta name="twitter:image" content="https://saeemax.com/media/og-image.jpg">
+
+  <!-- Favicon — temporary, replace with a proper 32x32 PNG when available -->
+  <link rel="icon" href="media/Saee Max Logo.jpg" type="image/jpeg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <img src="media/Saee Max Logo.jpg" alt="Saeemax">
+        <span class="logo-wordmark"><span class="logo-saee">Saee</span><span class="logo-max">max</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#portfolio">Systems Built</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="https://medium.com/@faarisrazi" target="_blank" rel="noopener noreferrer">Blog</a></li>
+      </ul>
+      <a href="#contact" class="btn-yellow nav-cta">Book a Call</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose"><i class="fa-solid fa-xmark"></i></button>
+    <ul>
+      <li><a href="#services" class="mobile-link">Services</a></li>
+      <li><a href="#how-it-works" class="mobile-link">How It Works</a></li>
+      <li><a href="#portfolio" class="mobile-link">Systems Built</a></li>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="https://medium.com/@faarisrazi" class="mobile-link" target="_blank" rel="noopener noreferrer">Blog</a></li>
+      <li><a href="#contact" class="mobile-link cta-mobile">Book a Call</a></li>
+    </ul>
+  </div>
+
+  <!-- ── HERO ── -->
+  <section class="hero" id="hero">
+    <canvas id="flowCanvas"></canvas>
+    <div class="hero-glow"></div>
+    <div class="hero-inner">
+      <h1 class="hero-headline">
+        Your marketing agency<br>
+        runs on <span class="highlight">manual work.</span><br>
+        AI automation changes that.
+      </h1>
+      <p class="hero-sub">
+        AI automation systems for content repurposing, lead response, and client reporting — built in Make.com, handed off to your team.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-yellow btn-glow">Book a Free Call</a>
+        <a href="#portfolio" class="btn-ghost">See Systems Built →</a>
+      </div>
+      <div class="hero-proof">
+        <div class="proof-item">
+          <span class="proof-num">10+</span>
+          <span class="proof-label">Hours saved per week</span>
+        </div>
+        <div class="proof-divider"></div>
+        <div class="proof-item">
+          <span class="proof-num">48hr</span>
+          <span class="proof-label">Typical delivery</span>
+        </div>
+        <div class="proof-divider"></div>
+        <div class="proof-item">
+          <span class="proof-num">100%</span>
+          <span class="proof-label">Handed off to your account</span>
+        </div>
+      </div>
+    </div>
+    <a href="#services" class="scroll-indicator" aria-label="Scroll to see more">
+      <i class="fa-solid fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- ── SERVICES ── -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-label">What We Build</div>
+      <h2 class="section-title">AI systems for the work your team<br>does every single week</h2>
+      <p class="section-sub">High-impact systems, each targeting the biggest time drains for your industry.</p>
+
+      <div class="services-grid">
+
+        <div class="service-card featured">
+          <div class="service-tag service-tag-floating">Most Popular</div>
+          <div class="service-card-header">
+            <div class="service-icon-wrap">
+              <i class="fa-solid fa-layer-group"></i>
+            </div>
+            <h3>Content Management System</h3>
+          </div>
+          <p>AI repurposes, schedules, and writes your content calendar — captions, images, and posts, all in your brand voice. One system, zero manual juggling.</p>
+          <ul class="service-outcomes">
+            <li><i class="fa-solid fa-check"></i> One video becomes weeks of platform-ready content</li>
+            <li><i class="fa-solid fa-check"></i> Auto-scheduled and published — no manual posting</li>
+            <li><i class="fa-solid fa-check"></i> AI-generated copy that matches your brand tone</li>
+          </ul>
+          <a href="#contact" class="service-cta">Get This System →</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-header">
+            <div class="service-icon-wrap">
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <h3>Instant Lead Reply System</h3>
+          </div>
+          <p>When a lead submits a form, they get a personalised AI-written reply in seconds — not hours. You never lose a lead to silence again.</p>
+          <ul class="service-outcomes">
+            <li><i class="fa-solid fa-check"></i> Sub-60 second response time</li>
+            <li><i class="fa-solid fa-check"></i> Sounds human, not robotic</li>
+            <li><i class="fa-solid fa-check"></i> Works while you sleep</li>
+          </ul>
+          <a href="#contact" class="service-cta">Get This System →</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-header">
+            <div class="service-icon-wrap">
+              <i class="fa-solid fa-chart-bar"></i>
+            </div>
+            <h3>Client Reporting Automation</h3>
+          </div>
+          <p>Pulls data from your tools, formats it, and sends polished reports to every client on schedule. No spreadsheets, no manual pulls.</p>
+          <ul class="service-outcomes">
+            <li><i class="fa-solid fa-check"></i> Auto-generated, branded reports</li>
+            <li><i class="fa-solid fa-check"></i> Runs on a schedule, no triggers needed</li>
+            <li><i class="fa-solid fa-check"></i> Frees up hours every client reporting cycle</li>
+          </ul>
+          <a href="#contact" class="service-cta">Get This System →</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-header">
+            <div class="service-icon-wrap">
+              <i class="fa-solid fa-user-check"></i>
+            </div>
+            <h3>Candidate Screening & Follow-Up System</h3>
+          </div>
+          <p>AI screens incoming CVs and shortlists top candidates automatically, then sends each one a personalised status update. No applicant left wondering.</p>
+          <ul class="service-outcomes">
+            <li><i class="fa-solid fa-check"></i> Screens and ranks CVs in minutes, not days</li>
+            <li><i class="fa-solid fa-check"></i> Every candidate gets a timely, human-sounding update</li>
+            <li><i class="fa-solid fa-check"></i> No applicant left hanging — protects your employer brand</li>
+          </ul>
+          <a href="#contact" class="service-cta">Get This System →</a>
+        </div>
+
+      </div>
+
+      <!-- ICP Callout — hidden per request, markup kept for future re-enable
+      <div class="icp-row">
+        <div class="icp-card">
+          <i class="fa-solid fa-bullhorn"></i>
+          <div>
+            <strong>Marketing Agencies & Coaches</strong>
+            <span>Content, scheduling, lead follow-up</span>
+          </div>
+        </div>
+        <div class="icp-card">
+          <i class="fa-solid fa-house"></i>
+          <div>
+            <strong>Real Estate Professionals</strong>
+            <span>Instant lead acknowledgment & follow-up</span>
+          </div>
+        </div>
+        <div class="icp-card">
+          <i class="fa-solid fa-users"></i>
+          <div>
+            <strong>Recruitment Agencies</strong>
+            <span>CV screening & candidate communication</span>
+          </div>
+        </div>
+      </div>
+      -->
+    </div>
+  </section>
+
+  <!-- ── HOW IT WORKS ── -->
+  <section class="section section-dark" id="how-it-works">
+    <div class="container">
+      <div class="section-header-row">
+        <div>
+          <div class="section-label">The Process</div>
+          <h2 class="section-title">Clear steps. No surprises.<br>Everything handled upfront.</h2>
+          <p class="section-sub">Most automation projects fall apart because of poor communication and missing access. Here's how we make sure that never happens.</p>
+        </div>
+        <a href="#contact" class="btn-yellow btn-glow section-header-cta">Start With a Free Call</a>
+      </div>
+
+      <div class="steps-row">
+
+        <div class="step">
+          <div class="step-num">01</div>
+          <h3>Discovery Call</h3>
+          <p>We start with a focused conversation about where your team is losing the most time. You tell me what's broken — I'll tell you exactly which system fixes it, what it delivers, and when. No upsell. No filler.</p>
+          <div class="step-detail">
+            <span><i class="fa-solid fa-circle-check"></i> Identify your biggest bottleneck</span>
+            <span><i class="fa-solid fa-circle-check"></i> Agree on scope and a clear outcome</span>
+            <span><i class="fa-solid fa-circle-check"></i> Set a realistic delivery timeline</span>
+          </div>
+        </div>
+
+        <div class="step-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+
+        <div class="step">
+          <div class="step-num">02</div>
+          <h3>Kickoff & Setup</h3>
+          <p>Once you're in, we run a short kickoff session to get everything sorted upfront — platform access, communication schedule, and a defined win condition so you always know exactly what done looks like.</p>
+          <div class="step-detail">
+            <span><i class="fa-solid fa-circle-check"></i> Platform access sorted in one session</span>
+            <span><i class="fa-solid fa-circle-check"></i> You agree on what "done" means</span>
+            <span><i class="fa-solid fa-circle-check"></i> No chasing you for info mid-build</span>
+          </div>
+        </div>
+
+        <div class="step-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+
+        <div class="step">
+          <div class="step-num">03</div>
+          <h3>Build, Test & Handoff</h3>
+          <p>The system is built and tested end-to-end before you see it. You get a working scenario in your own Make.com account, a walkthrough video, and a written SOP your team can follow without me in the room.</p>
+          <div class="step-detail">
+            <span><i class="fa-solid fa-circle-check"></i> Fully tested before delivery</span>
+            <span><i class="fa-solid fa-circle-check"></i> Scenario handed off to your account</span>
+            <span><i class="fa-solid fa-circle-check"></i> Video walkthrough + written SOP included</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PORTFOLIO ── -->
+  <section class="section" id="portfolio">
+    <div class="container">
+      <div class="section-label">Systems Built</div>
+      <h2 class="section-title">Real automations. Real output.</h2>
+      <p class="section-sub">Each system below is built in Make.com and handed off directly to the client's account.</p>
+
+      <div class="portfolio-grid">
+
+        <!-- Video 1: from media/1. YouTube Video to short Clips Identification + Captions.mp4 -->
+        <div class="portfolio-card portfolio-card-video"
+             data-video="media/1. YouTube Video to short Clips Identification + Captions.mp4"
+             data-title="YouTube Video to short Clips Identification + Captions"
+             data-tag="Content Automation"
+             data-desc="Drop in a YouTube URL. This system fetches the transcript, feeds it to AI, and identifies the best 10–15 clip moments with timestamps, suggested captions, and hashtag sets — ready for Instagram Reels, TikTok, and Shorts. No one has to sit through the full video. It just finds the gold.">
+          <div class="portfolio-thumb aspect-horizontal">
+            <video src="media/1. YouTube Video to short Clips Identification + Captions.mp4" muted preload="metadata" playsinline aria-label="YouTube Video to short Clips Identification + Captions demo preview"></video>
+            <div class="play-overlay"><i class="fa-solid fa-play"></i></div>
+          </div>
+          <div class="portfolio-card-label">
+            <h3>YouTube Video to short Clips Identification + Captions</h3>
+          </div>
+          <template>
+            <div class="portfolio-meta">
+              <span><i class="fa-solid fa-circle-nodes"></i> Make.com</span>
+              <span><i class="fa-solid fa-microchip"></i> Gemini AI</span>
+              <span><i class="fa-brands fa-google"></i> Google Forms</span>
+              <span><i class="fa-solid fa-layer-group"></i> 4 modules</span>
+            </div>
+          </template>
+        </div>
+
+        <!-- Video 2: from media/2. Linkedin Scheduled Posts.mp4 -->
+        <div class="portfolio-card portfolio-card-video"
+             data-video="media/2. Linkedin Scheduled Posts.mp4"
+             data-title="Linkedin Scheduled Posts"
+             data-tag="Content Scheduling"
+             data-desc="A content calendar built through AI automation — brand tone, image generation, captions, hashtags. Every day, this system checks what post is pending and publishes it to LinkedIn automatically at a set time. No manual posting. No forgetting. Your content goes out whether you're there or not.">
+          <div class="portfolio-thumb aspect-horizontal">
+            <video src="media/2. Linkedin Scheduled Posts.mp4" muted preload="metadata" playsinline aria-label="Linkedin Scheduled Posts demo preview"></video>
+            <div class="play-overlay"><i class="fa-solid fa-play"></i></div>
+          </div>
+          <div class="portfolio-card-label">
+            <h3>Linkedin Scheduled Posts</h3>
+          </div>
+          <template>
+            <div class="portfolio-meta">
+              <span><i class="fa-solid fa-circle-nodes"></i> Make.com</span>
+              <span><i class="fa-brands fa-linkedin"></i> LinkedIn API</span>
+              <span><i class="fa-solid fa-image"></i> AI Image Gen</span>
+              <span><i class="fa-solid fa-clock"></i> Scheduled</span>
+            </div>
+          </template>
+        </div>
+
+        <!-- Image 3: from media/3. Instagram Daily Posts (Reels, Photos, Carousels).png -->
+        <div class="portfolio-card portfolio-card-image">
+          <div class="portfolio-thumb aspect-wide">
+            <img src="media/3. Instagram Daily Posts (Reels, Photos, Carousels).png" alt="Instagram Daily Posts (Reels, Photos, Carousels)" loading="lazy">
+          </div>
+          <div class="portfolio-card-label">
+            <h3>Instagram Daily Posts (Reels, Photos, Carousels)</h3>
+            <p>Automatically posts Reels, photos, and carousels to Instagram every day from a content calendar.</p>
+          </div>
+        </div>
+
+        <!-- Blueprint only: AI Lead Reply + CRM Logging -->
+        <div class="portfolio-card portfolio-card-blueprint">
+          <div class="portfolio-body">
+            <div class="portfolio-tag blueprint">Blueprint Available</div>
+            <h3>AI Lead Reply + CRM Logging</h3>
+            <p>When a customer submits a form, Gemini AI generates a personalised reply sent via email — and the lead is simultaneously logged into your CRM. Built and tested successfully with Odoo, can be built for your CRM.</p>
+            <div class="portfolio-meta">
+              <span><i class="fa-solid fa-circle-nodes"></i> Make.com</span>
+              <span><i class="fa-solid fa-microchip"></i> Gemini AI</span>
+              <span><i class="fa-solid fa-database"></i> CRM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coming soon: Client Reporting System -->
+        <div class="portfolio-card portfolio-card-coming">
+          <div class="portfolio-body">
+            <div class="portfolio-tag muted">Coming Soon</div>
+            <h3>Client Reporting System</h3>
+            <p>Automatically pulls performance data, generates a formatted report, and emails it to each client on a set schedule — no spreadsheets, no manual pulls.</p>
+            <div class="portfolio-meta">
+              <span><i class="fa-solid fa-circle-nodes"></i> Make.com</span>
+              <span><i class="fa-brands fa-google"></i> Google Sheets</span>
+              <span><i class="fa-solid fa-clock"></i> Scheduled</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PORTFOLIO VIDEO MODAL ── -->
+  <div class="video-modal" id="videoModal">
+    <div class="video-modal-overlay" id="videoModalOverlay"></div>
+    <div class="video-modal-content">
+      <button class="video-modal-close" id="videoModalClose" aria-label="Close video"><i class="fa-solid fa-xmark"></i></button>
+      <video id="videoModalPlayer" controls playsinline></video>
+      <div class="portfolio-tag" id="videoModalTag"></div>
+      <h3 id="videoModalTitle"></h3>
+      <p id="videoModalDesc"></p>
+      <div class="portfolio-meta" id="videoModalMeta"></div>
+    </div>
+  </div>
+
+  <!-- ── ABOUT ── -->
+  <section class="section section-dark" id="about">
+    <div class="container">
+      <div class="about-inner">
+
+        <div class="about-photo-wrap">
+          <div class="about-photo-frame">
+            <img src="https://media.licdn.com/dms/image/v2/D4D03AQFtmUVezgAjPw/profile-displayphoto-crop_800_800/B4DZ2BVamDHUAI-/0/1775991369388?e=1792627200&v=beta&t=8L3up5dKi-uDviaiUGdTT2t_Y2_YenAINoz_Hdz59R0" alt="Syed Faaris Razi, founder of Saeemax" class="about-photo" loading="lazy"
+              onerror="if(!this.dataset.fallback){this.dataset.fallback='1';this.src='media/about-photo.jpeg';}else{this.parentElement.innerHTML='<div class=\'photo-placeholder\'><i class=\'fa-solid fa-user\'></i></div>';}">
+          </div>
+          <div class="about-profiles">
+            <a href="https://linkedin.com/in/faarisrazi" class="profile-link" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://contra.com/faarisrazi" class="profile-link" target="_blank" rel="noopener noreferrer">
+              <i class="fa-solid fa-c"></i> Contra
+            </a>
+            <a href="https://pph.me/faarisrazi" class="profile-link" target="_blank" rel="noopener noreferrer">
+              <i class="fa-solid fa-clock"></i> PeoplePerHour
+            </a>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <div class="section-label">Who's Behind This</div>
+          <h2 class="about-name">Syed Faaris Razi</h2>
+          <p class="about-role">Founder, Saeemax</p>
+          <p class="about-bio">
+            My background is in data and business analytics — trained in Canada, then spent several years delivering analytical solutions across government and private sector organisations in the UAE. I've worked on everything from compliance automation and data pipelines to business intelligence dashboards used at the organisational level.
+          </p>
+          <p class="about-bio">
+            That work taught me one thing clearly: the teams that move fastest aren't the biggest — they're the ones with the fewest manual steps between a trigger and an outcome. That's the problem I now solve specifically for agencies and service businesses through AI automation.
+          </p>
+          <p class="about-bio">
+            <strong>Saeemax operates fully online</strong> and works with clients across any timezone. If you want a system that runs without your team having to touch it, let's talk.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-label">Let's Talk</div>
+      <h2 class="section-title">Book a free 30-minute call</h2>
+      <p class="section-sub">We'll map out exactly which automation saves your agency the most time — no pitch, no pressure. Just a clear plan you can act on.</p>
+
+      <div class="contact-wrapper">
+        <div class="contact-tabs">
+          <button class="contact-tab active" data-tab="calendly">
+            <i class="fa-solid fa-calendar-check"></i> Book a Call
+          </button>
+          <button class="contact-tab" data-tab="email">
+            <i class="fa-solid fa-envelope"></i> Send a Message
+          </button>
+        </div>
+
+        <div class="contact-panel active" id="panel-calendly">
+          <div class="calendly-inline-widget" data-url="https://calendly.com/faarisrazi?primary_color=ffef0a&text_color=0d1a42&background_color=ffffff" style="min-width:320px;height:700px;"></div>
+          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        </div>
+
+        <div class="contact-panel" id="panel-email">
+          <div class="email-form-wrap">
+            <p class="email-note">Prefer email? Reach me directly at <a href="mailto:faaris@saeemax.com">faaris@saeemax.com</a> or use the form below.</p>
+            <form id="contactForm" action="mailto:faaris@saeemax.com" method="GET" enctype="text/plain">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Your Name</label>
+                  <input type="text" id="name" name="name" placeholder="e.g. Sarah from GrowthAgency" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Your Email</label>
+                  <input type="email" id="email" name="email" placeholder="you@yourcompany.com" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="service">What are you looking to automate?</label>
+                  <select id="service" name="service">
+                    <option value="">Select a service area</option>
+                    <option>Content management & scheduling</option>
+                    <option>Lead response automation</option>
+                    <option>Client reporting</option>
+                    <option>Candidate screening & follow-up</option>
+                    <option>Something else</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="message">Tell me about your biggest time drain</label>
+                  <textarea id="message" name="body" placeholder="e.g. We manually repurpose content for 12 clients and it takes our team 2 days every week..." required></textarea>
+                </div>
+              </div>
+              <button type="submit" class="btn-yellow btn-glow full-width">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">
+            <img src="media/Saee Max Logo.jpg" alt="Saeemax logo" loading="lazy">
+            <span class="logo-wordmark"><span class="logo-saee">Saee</span><span class="logo-max">max</span></span>
+          </a>
+          <p>AI automation systems for marketing agencies, real estate professionals, and recruitment teams.</p>
+          <!-- Saeemax company page: https://www.linkedin.com/company/saeemax/ (currently blank, kept for future use) -->
+          <div class="footer-socials">
+            <a href="https://linkedin.com/in/faarisrazi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/saee.max/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <!-- fa-x-twitter is not in Font Awesome 6.4.0 free; using the classic bird glyph instead -->
+            <a href="https://x.com/faarisrazi" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.facebook.com/faaris.saeemax" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.youtube.com/@FaarisBuilds" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Services</h4>
+            <a href="#services">Content Management</a>
+            <a href="#services">Lead Reply Automation</a>
+            <a href="#services">Client Reporting</a>
+            <a href="#services">Candidate Screening</a>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <a href="mailto:faaris@saeemax.com">faaris@saeemax.com</a>
+            <a href="https://linkedin.com/in/faarisrazi" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="#contact">Book a Call</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Saeemax. All rights reserved.</p>
+        <p>Operating worldwide, fully online.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Saeemax",
+    "url": "https://saeemax.com",
+    "email": "faaris@saeemax.com",
+    "founder": {
+      "@type": "Person",
+      "name": "Syed Faaris Razi"
+    },
+    "description": "AI automation agency building Make.com systems for marketing agencies, real estate professionals, and recruitment teams.",
+    "serviceType": ["AI Automation", "Marketing Automation", "Workflow Automation", "Make.com Development"],
+    "areaServed": "Worldwide",
+    "sameAs": [
+      "https://linkedin.com/in/faarisrazi",
+      "https://www.linkedin.com/company/saeemax/",
+      "https://www.instagram.com/saee.max/",
+      "https://x.com/faarisrazi",
+      "https://www.facebook.com/faaris.saeemax",
+      "https://www.youtube.com/@FaarisBuilds"
+    ]
+  }
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
