@@ -10,3 +10,9 @@ media/*raw*.mp4
 # OS cruft
 .DS_Store
 Thumbs.db
+
+# Lead scraper secrets/output
+credentials.json
+leads_output.csv
+__pycache__/
+.env
