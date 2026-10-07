@@ -1,0 +1,26 @@
+[
+  {
+    "order": 1,
+    "video": "1. YouTube Video to short Clips Identification + Captions.mp4",
+    "title": "YouTube Video to Short Clips + Captions",
+    "tag": "Content Automation",
+    "description": "Drop in a YouTube URL. This system fetches the transcript, feeds it to AI, and identifies the best clip moments with timestamps, suggested captions, and hashtag sets — ready for Instagram Reels, TikTok, and Shorts. No one has to sit through the full video.",
+    "tools": ["Make.com", "Gemini AI", "Google Forms", "4 modules"]
+  },
+  {
+    "order": 2,
+    "video": "2. Linkedin Scheduled Posts.mp4",
+    "title": "LinkedIn Scheduled Posts",
+    "tag": "Content Scheduling",
+    "description": "A content calendar built through AI automation. Every day, this system checks what post is pending and publishes it to LinkedIn automatically at a set time. Brand tone, captions, and hashtags handled automatically. No manual posting, no forgetting.",
+    "tools": ["Make.com", "LinkedIn API", "Gemini AI", "Scheduled"]
+  },
+  {
+    "order": 3,
+    "video": "3. Instagram Daily Posts (Reels, Photos, Carousels).mp4",
+    "title": "Instagram Daily Posts (Reels, Photos, Carousels)",
+    "tag": "Content Automation",
+    "description": "Automatically posts Reels, photos, and carousels to Instagram every day from a content calendar. Images, captions, and hashtags are prepared and queued — the system handles the posting on schedule without any manual action.",
+    "tools": ["Make.com", "Instagram API", "Gemini AI", "Scheduled"]
+  }
+]

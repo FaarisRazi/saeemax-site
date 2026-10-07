@@ -37,7 +37,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ── Portfolio video modal ──
+  // ── Portfolio: demos.json-driven cards + video modal ──
+  const portfolioGrid = document.getElementById('portfolioGrid');
+  const portfolioFallback = document.getElementById('portfolioFallback');
   const modal = document.getElementById('videoModal');
   const modalPlayer = document.getElementById('videoModalPlayer');
   const modalTag = document.getElementById('videoModalTag');
@@ -45,14 +47,27 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalDesc = document.getElementById('videoModalDesc');
   const modalMeta = document.getElementById('videoModalMeta');
 
-  const openModal = (card) => {
-    modalPlayer.src = card.dataset.video;
-    modalTag.textContent = card.dataset.tag;
-    modalTitle.textContent = card.dataset.title;
-    modalDesc.textContent = card.dataset.desc;
-    modalMeta.innerHTML = '';
-    const metaTemplate = card.querySelector('template');
-    if (metaTemplate) modalMeta.appendChild(metaTemplate.content.cloneNode(true));
+  // Picks an icon for a tool pill by keyword match; falls back to a generic dot.
+  const TOOL_ICONS = [
+    [/make\.com/i, 'fa-solid fa-circle-nodes'],
+    [/gemini/i, 'fa-solid fa-microchip'],
+    [/google/i, 'fa-brands fa-google'],
+    [/linkedin/i, 'fa-brands fa-linkedin'],
+    [/instagram/i, 'fa-brands fa-instagram'],
+    [/api/i, 'fa-solid fa-plug'],
+    [/schedul/i, 'fa-solid fa-clock'],
+    [/module/i, 'fa-solid fa-layer-group'],
+  ];
+  const toolIcon = (tool) => (TOOL_ICONS.find(([re]) => re.test(tool)) || [null, 'fa-solid fa-circle'])[1];
+
+  let demos = [];
+
+  const openModal = (demo) => {
+    modalPlayer.src = 'media/' + demo.video;
+    modalTag.textContent = demo.tag;
+    modalTitle.textContent = demo.title;
+    modalDesc.textContent = demo.description;
+    modalMeta.innerHTML = demo.tools.map(t => `<span><i class="${toolIcon(t)}"></i> ${t}</span>`).join('');
     modal.classList.add('open');
     document.body.style.overflow = 'hidden';
     modalPlayer.play().catch(() => {});
@@ -66,14 +81,58 @@ document.addEventListener('DOMContentLoaded', () => {
     modalPlayer.load();
   };
 
-  document.querySelectorAll('.portfolio-card-video').forEach(card => {
-    card.addEventListener('click', () => openModal(card));
-  });
   document.getElementById('videoModalClose')?.addEventListener('click', closeModal);
   document.getElementById('videoModalOverlay')?.addEventListener('click', closeModal);
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal?.classList.contains('open')) closeModal();
   });
+
+  const demoCardHTML = (demo, index) => `
+    <div class="portfolio-card portfolio-card-video" data-index="${index}">
+      <div class="portfolio-thumb aspect-horizontal">
+        <video src="media/${demo.video}" autoplay muted loop playsinline preload="none" aria-label="${demo.title} demo preview"></video>
+        <div class="play-overlay"><i class="fa-solid fa-play"></i></div>
+      </div>
+      <div class="portfolio-card-label">
+        <div class="portfolio-tag">${demo.tag}</div>
+        <h3>${demo.title}</h3>
+      </div>
+    </div>`;
+
+  const skeletonHTML = Array.from({ length: 3 }, () => `
+    <div class="portfolio-card portfolio-skeleton">
+      <div class="skeleton-thumb"></div>
+      <div class="skeleton-label"></div>
+    </div>`).join('');
+
+  if (portfolioGrid) {
+    portfolioGrid.insertAdjacentHTML('afterbegin', skeletonHTML);
+
+    fetch('media/demos.json')
+      .then(res => { if (!res.ok) throw new Error('demos.json fetch failed'); return res.json(); })
+      .then(data => {
+        demos = [...data].sort((a, b) => a.order - b.order);
+        portfolioGrid.querySelectorAll('.portfolio-skeleton').forEach(el => el.remove());
+        portfolioGrid.insertAdjacentHTML('afterbegin', demos.map(demoCardHTML).join(''));
+
+        portfolioGrid.querySelectorAll('.portfolio-card-video video').forEach(video => {
+          video.addEventListener('error', () => video.closest('.portfolio-thumb')?.classList.add('video-error'));
+          // preload="none" means the autoplay attribute alone won't start loading — kick it off manually.
+          video.play().catch(() => {});
+        });
+
+        portfolioGrid.addEventListener('click', (e) => {
+          const card = e.target.closest('.portfolio-card-video');
+          if (!card) return;
+          const demo = demos[Number(card.dataset.index)];
+          if (demo) openModal(demo);
+        });
+      })
+      .catch(() => {
+        portfolioGrid.querySelectorAll('.portfolio-skeleton').forEach(el => el.remove());
+        if (portfolioFallback) portfolioFallback.hidden = false;
+      });
+  }
 
   // ── Hero canvas: Make.com-style node graph with yellow particle trails ──
   const canvas = document.getElementById('flowCanvas');

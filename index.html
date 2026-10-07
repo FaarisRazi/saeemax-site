@@ -280,64 +280,9 @@
       <h2 class="section-title">Real automations. Real output.</h2>
       <p class="section-sub">Each system below is built in Make.com and handed off directly to the client's account.</p>
 
-      <div class="portfolio-grid">
+      <div class="portfolio-grid" id="portfolioGrid">
 
-        <!-- Video 1: from media/1. YouTube Video to short Clips Identification + Captions.mp4 -->
-        <div class="portfolio-card portfolio-card-video"
-             data-video="media/1. YouTube Video to short Clips Identification + Captions.mp4"
-             data-title="YouTube Video to short Clips Identification + Captions"
-             data-tag="Content Automation"
-             data-desc="Drop in a YouTube URL. This system fetches the transcript, feeds it to AI, and identifies the best 10–15 clip moments with timestamps, suggested captions, and hashtag sets — ready for Instagram Reels, TikTok, and Shorts. No one has to sit through the full video. It just finds the gold.">
-          <div class="portfolio-thumb aspect-horizontal">
-            <video src="media/1. YouTube Video to short Clips Identification + Captions.mp4" muted preload="metadata" playsinline aria-label="YouTube Video to short Clips Identification + Captions demo preview"></video>
-            <div class="play-overlay"><i class="fa-solid fa-play"></i></div>
-          </div>
-          <div class="portfolio-card-label">
-            <h3>YouTube Video to short Clips Identification + Captions</h3>
-          </div>
-          <template>
-            <div class="portfolio-meta">
-              <span><i class="fa-solid fa-circle-nodes"></i> Make.com</span>
-              <span><i class="fa-solid fa-microchip"></i> Gemini AI</span>
-              <span><i class="fa-brands fa-google"></i> Google Forms</span>
-              <span><i class="fa-solid fa-layer-group"></i> 4 modules</span>
-            </div>
-          </template>
-        </div>
-
-        <!-- Video 2: from media/2. Linkedin Scheduled Posts.mp4 -->
-        <div class="portfolio-card portfolio-card-video"
-             data-video="media/2. Linkedin Scheduled Posts.mp4"
-             data-title="Linkedin Scheduled Posts"
-             data-tag="Content Scheduling"
-             data-desc="A content calendar built through AI automation — brand tone, image generation, captions, hashtags. Every day, this system checks what post is pending and publishes it to LinkedIn automatically at a set time. No manual posting. No forgetting. Your content goes out whether you're there or not.">
-          <div class="portfolio-thumb aspect-horizontal">
-            <video src="media/2. Linkedin Scheduled Posts.mp4" muted preload="metadata" playsinline aria-label="Linkedin Scheduled Posts demo preview"></video>
-            <div class="play-overlay"><i class="fa-solid fa-play"></i></div>
-          </div>
-          <div class="portfolio-card-label">
-            <h3>Linkedin Scheduled Posts</h3>
-          </div>
-          <template>
-            <div class="portfolio-meta">
-              <span><i class="fa-solid fa-circle-nodes"></i> Make.com</span>
-              <span><i class="fa-brands fa-linkedin"></i> LinkedIn API</span>
-              <span><i class="fa-solid fa-image"></i> AI Image Gen</span>
-              <span><i class="fa-solid fa-clock"></i> Scheduled</span>
-            </div>
-          </template>
-        </div>
-
-        <!-- Image 3: from media/3. Instagram Daily Posts (Reels, Photos, Carousels).png -->
-        <div class="portfolio-card portfolio-card-image">
-          <div class="portfolio-thumb aspect-wide">
-            <img src="media/3. Instagram Daily Posts (Reels, Photos, Carousels).png" alt="Instagram Daily Posts (Reels, Photos, Carousels)" loading="lazy">
-          </div>
-          <div class="portfolio-card-label">
-            <h3>Instagram Daily Posts (Reels, Photos, Carousels)</h3>
-            <p>Automatically posts Reels, photos, and carousels to Instagram every day from a content calendar.</p>
-          </div>
-        </div>
+        <!-- Demo cards are generated here by script.js from media/demos.json -->
 
         <!-- Blueprint only: AI Lead Reply + CRM Logging -->
         <div class="portfolio-card portfolio-card-blueprint">
@@ -368,6 +313,7 @@
         </div>
 
       </div>
+      <p class="portfolio-fallback" id="portfolioFallback" hidden>Couldn't load the portfolio right now — refresh the page, or <a href="#contact">get in touch</a> to see examples directly.</p>
     </div>
   </section>
 

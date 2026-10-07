@@ -705,7 +705,28 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   opacity: 0.6;
   margin-left: auto;
 }
-.portfolio-card-video template { display: none; }
+/* Loading skeleton, shown in card positions while demos.json fetches */
+.portfolio-skeleton { pointer-events: none; }
+.skeleton-thumb { aspect-ratio: 16/9; background: var(--border); }
+.skeleton-label { height: 48px; margin: 18px 20px; background: var(--border); border-radius: 6px; }
+.skeleton-thumb, .skeleton-label { animation: skeleton-pulse 1.4s ease-in-out infinite; }
+@keyframes skeleton-pulse { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
+
+/* Fallback message if demos.json fails to load entirely */
+.portfolio-fallback {
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+  padding: 32px 20px;
+  margin-top: 24px;
+  border: 1px dashed var(--border);
+  border-radius: 16px;
+}
+.portfolio-fallback a { color: var(--yellow); }
+
+/* Per-video fallback: a single video failing to load shows a static play icon instead */
+.portfolio-thumb.video-error video { display: none; }
+.portfolio-thumb.video-error .play-overlay { opacity: 1; background: rgba(13,26,66,0.7); }
 
 /* Image-only card (no video to play) — thumbnail + title, not clickable */
 .portfolio-thumb.aspect-wide { aspect-ratio: 2.87/1; }
