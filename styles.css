@@ -391,6 +391,19 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 /* ── SERVICES ── */
+/* Sits beside the heading in the header-row's open space on wide screens */
+.founder-banner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  max-width: 300px;
+  text-align: right;
+}
+.founder-banner .founder-sub { text-align: right; }
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -468,14 +481,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-size: 15px;
   color: var(--muted);
   line-height: 1.65;
-  margin-bottom: 24px;
+  margin-bottom: 14px;
 }
 
 .service-outcomes {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-bottom: 28px;
+  margin-bottom: 12px;
 }
 .service-outcomes li {
   display: flex;
@@ -504,52 +517,89 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .service-cta:hover { gap: 10px; }
 
 .service-pricing { margin-bottom: 24px; }
-.price-divider { border-top: 1px solid rgba(240,233,62,0.20); margin: 16px 0; }
+.price-divider { border-top: 1px solid rgba(240,233,62,0.20); margin: 12px 0; }
 .price-strike {
   display: block;
-  font-size: 13px;
-  color: rgba(255,255,255,0.55);
+  font-size: 15px;
+  color: rgba(255,255,255,0.65);
   text-decoration: line-through;
 }
 .price-main {
   display: block;
   font-family: var(--font-display);
-  font-size: 30px;
+  font-size: 38px;
   font-weight: 700;
   color: #ffffff;
-  margin-top: 4px;
+  margin-top: 2px;
 }
 .price-setup {
   display: block;
   font-size: 11px;
-  color: rgba(255,255,255,0.50);
-  margin-top: 6px;
+  color: rgba(255,255,255,0.45);
+  margin-top: 5px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
-.founder-badge,
-.best-value-badge {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  display: inline-block;
+.best-value-solo {
+  margin-top: 6px;
+  margin-bottom: 14px;
+}
+
+.founder-pill {
   font-size: 11px;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  border-radius: 100px;
-  padding: 4px 10px;
-}
-.founder-badge {
   color: #f0e93e;
-  background: rgba(240,233,62,0.15);
-  border: 1px solid rgba(240,233,62,0.40);
+  background: rgba(240,233,62,0.12);
+  border: 1px solid rgba(240,233,62,0.35);
+  border-radius: 100px;
+  padding: 3px 10px;
+  white-space: nowrap;
 }
-.best-value-badge {
-  color: #0d1a42;
+
+.founder-pill-best {
   background: #f0e93e;
+  color: #0d1a42;
   border: none;
+}
+
+/* The header banner's pill gets a pulsing glow + live-ping dot — signals
+   "limited, act now" without repeating this on every per-card instance. */
+.founder-banner .founder-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  animation: founderPillGlow 2.4s ease-in-out infinite;
+}
+.founder-banner .founder-pill::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #f0e93e;
+  flex-shrink: 0;
+  animation: founderDotPing 1.8s ease-out infinite;
+}
+@keyframes founderPillGlow {
+  0%, 100% { box-shadow: 0 0 6px 0 rgba(240,233,62,0.25); }
+  50%      { box-shadow: 0 0 16px 3px rgba(240,233,62,0.55); }
+}
+@keyframes founderDotPing {
+  0%   { box-shadow: 0 0 0 0 rgba(240,233,62,0.6); }
+  70%  { box-shadow: 0 0 0 7px rgba(240,233,62,0); }
+  100% { box-shadow: 0 0 0 0 rgba(240,233,62,0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .founder-banner .founder-pill,
+  .founder-banner .founder-pill::before { animation: none; }
+}
+
+.founder-sub {
+  font-size: 12px;
+  color: rgba(255,255,255,0.45);
+  font-style: italic;
 }
 
 /* ICP Row */
@@ -661,6 +711,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 @media (max-width: 760px) {
   .section-header-row { flex-direction: column; align-items: flex-start; }
+  .founder-banner { justify-content: flex-start; text-align: left; max-width: none; margin-top: 4px; }
+  .founder-banner .founder-sub { text-align: left; }
 }
 
 /* ── PORTFOLIO ── */
