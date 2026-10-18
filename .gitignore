@@ -11,6 +11,17 @@ media/*raw*.mp4
 .DS_Store
 Thumbs.db
 
+# taste-skill inspector scratch output (screenshots, direction cache)
+.taste-skill/
+
+# impeccable design-hook local session cache
+.impeccable/
+
+# Source demo footage now replaced by YouTube embeds in the work grid —
+# kept locally for reference, not shipped
+media/1. Leads Reply (Hubspot, Slack, Gmail).mp4
+media/4. Instagram Daily Posts (Reels, Photos, Carousels).mp4
+
 # Lead scraper secrets/output
 credentials.json
 leads_output.csv
