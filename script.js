@@ -10,6 +10,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  // ── Hero video: dedicated mute toggle (native controls can hide the
+  // volume button entirely at narrow widths, leaving no way to unmute) ──
+  const heroVideo = document.getElementById('heroVideo');
+  const heroMuteBtn = document.getElementById('heroMuteBtn');
+  if (heroVideo && heroMuteBtn) {
+    const syncMuteIcon = () => {
+      heroMuteBtn.innerHTML = heroVideo.muted
+        ? '<i class="fa-solid fa-volume-xmark"></i>'
+        : '<i class="fa-solid fa-volume-high"></i>';
+      heroMuteBtn.setAttribute('aria-label', heroVideo.muted ? 'Unmute video' : 'Mute video');
+    };
+    syncMuteIcon();
+    heroMuteBtn.addEventListener('click', () => { heroVideo.muted = !heroVideo.muted; });
+    heroVideo.addEventListener('volumechange', syncMuteIcon);
+  }
+
   // ── Nav scroll state ──
   const nav = document.getElementById('nav');
   const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 10);
